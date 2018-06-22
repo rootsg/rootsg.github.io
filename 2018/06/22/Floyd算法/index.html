@@ -106,25 +106,25 @@
 
 
 
-  <meta name="description" content="从我准备转行至今已过了半年多的时间，对《数据结构》这一门课的认知经历了三个阶段的变化。 第一阶段：当我正欲转行之时，听从了朋友的建议。一手C++，一手《数据结构》，利用C++实现各种数据结构，达到巩固两者的目的。那时只知《数据结构》十分抽象，也不知其究竟有何用，最终也没有实现几个结构，没有写出几个算法就弃了，一心在网上找题刷，补充C++的语法的语法知识。可以说这个阶段我只对各种数据结构有一些概念上">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="算法理解Floyd算法用于求图中任意两点的最短距离。 算法步骤Floyd算法的内涵是遍历N个结点，对于第k个结点，将k结点作为中间结点，更新其余结点的信息：即其余结点（i）能否通过结点k来缩短与其他结点(j)的距离 Floyd的代码写起来非常简洁，但一直有一个小问题会困惑，假设i-j的最短距离中，以k结点更新最短距离时，如果此时i-k和k-j不是最短距离，如何保证i-j是最短距离呢？ 假设i-j最">
+<meta name="keywords" content="最短路径,Floyd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我对《数据结构》的认知变化">
-<meta property="og:url" content="http://yoursite.com/2018/06/21/我对《数据结构》的认知变化/index.html">
+<meta property="og:title" content="Floyd算法">
+<meta property="og:url" content="http://yoursite.com/2018/06/22/Floyd算法/index.html">
 <meta property="og:site_name" content="Root&#39;s Blog">
-<meta property="og:description" content="从我准备转行至今已过了半年多的时间，对《数据结构》这一门课的认知经历了三个阶段的变化。 第一阶段：当我正欲转行之时，听从了朋友的建议。一手C++，一手《数据结构》，利用C++实现各种数据结构，达到巩固两者的目的。那时只知《数据结构》十分抽象，也不知其究竟有何用，最终也没有实现几个结构，没有写出几个算法就弃了，一心在网上找题刷，补充C++的语法的语法知识。可以说这个阶段我只对各种数据结构有一些概念上">
+<meta property="og:description" content="算法理解Floyd算法用于求图中任意两点的最短距离。 算法步骤Floyd算法的内涵是遍历N个结点，对于第k个结点，将k结点作为中间结点，更新其余结点的信息：即其余结点（i）能否通过结点k来缩短与其他结点(j)的距离 Floyd的代码写起来非常简洁，但一直有一个小问题会困惑，假设i-j的最短距离中，以k结点更新最短距离时，如果此时i-k和k-j不是最短距离，如何保证i-j是最短距离呢？ 假设i-j最">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-21T13:39:32.997Z">
+<meta property="og:updated_time" content="2018-06-22T03:23:21.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我对《数据结构》的认知变化">
-<meta name="twitter:description" content="从我准备转行至今已过了半年多的时间，对《数据结构》这一门课的认知经历了三个阶段的变化。 第一阶段：当我正欲转行之时，听从了朋友的建议。一手C++，一手《数据结构》，利用C++实现各种数据结构，达到巩固两者的目的。那时只知《数据结构》十分抽象，也不知其究竟有何用，最终也没有实现几个结构，没有写出几个算法就弃了，一心在网上找题刷，补充C++的语法的语法知识。可以说这个阶段我只对各种数据结构有一些概念上">
+<meta name="twitter:title" content="Floyd算法">
+<meta name="twitter:description" content="算法理解Floyd算法用于求图中任意两点的最短距离。 算法步骤Floyd算法的内涵是遍历N个结点，对于第k个结点，将k结点作为中间结点，更新其余结点的信息：即其余结点（i）能否通过结点k来缩短与其他结点(j)的距离 Floyd的代码写起来非常简洁，但一直有一个小问题会困惑，假设i-j的最短距离中，以k结点更新最短距离时，如果此时i-k和k-j不是最短距离，如何保证i-j是最短距离呢？ 假设i-j最">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/21/我对《数据结构》的认知变化/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/22/Floyd算法/"/>
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>我对《数据结构》的认知变化 | Root's Blog</title>
+  <title>Floyd算法 | Root's Blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/21/我对《数据结构》的认知变化/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/Floyd算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="钟离">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我对《数据结构》的认知变化
+          <h1 class="post-title" itemprop="name headline">Floyd算法
               
             
           </h1>
@@ -337,7 +337,7 @@
                 
               
 
-              <time title="创建时间：2018-06-21 19:28:01 / 修改时间：21:39:32" itemprop="dateCreated datePublished" datetime="2018-06-21T19:28:01+08:00">2018-06-21</time>
+              <time title="创建时间：2018-06-22 09:51:47 / 修改时间：11:23:21" itemprop="dateCreated datePublished" datetime="2018-06-22T09:51:47+08:00">2018-06-22</time>
             
 
             
@@ -393,21 +393,19 @@
       
 
       
-        <p>从我准备转行至今已过了半年多的时间，对《数据结构》这一门课的认知经历了三个阶段的变化。</p>
-<h2 id="第一阶段："><a href="#第一阶段：" class="headerlink" title="第一阶段："></a>第一阶段：</h2><p>当我正欲转行之时，听从了朋友的建议。一手C++，一手《数据结构》，利用C++实现各种数据结构，达到巩固两者的目的。那时只知《数据结构》十分抽象，也不知其究竟有何用，最终也没有实现几个结构，没有写出几个算法就弃了，一心在网上找题刷，补充C++的语法的语法知识。可以说这个阶段我只对各种数据结构有一些概念上的理解。</p>
-<h2 id="第二阶段："><a href="#第二阶段：" class="headerlink" title="第二阶段："></a>第二阶段：</h2><p>我相信大部分没有科班体系的学生在开始都有一个终极疑惑“为什么别人的程序都有漂亮的UI界面，而我的始终只是黑白框？？”。我也是在这个疑惑的驱使下开始了window下开发的学习，查了各种资料后觉得Qt库是目前比较流行的C++库，遂开始了写一些网上可以参考的项目。</p>
-<p>在这个过程中，我开始了解数据结构的作用。我认为，《数据结构》这门课的产生正与我学习的过程相反。应当是人们在编程的过程中，重复着使用着一些结构，于是有人将常用的结构抽象化，构成了《数据结构》一课。</p>
-<p>虽然在这个阶段我认识到了《数据结构》的重要性，但是我也理解到前人几乎将所有的结构都已封装完成，只要去查文档，熟练使用接口就可应付大部分问题，剩下的只需要理清应用层逻辑即可。</p>
-<p>我当时也理解了为何会有各种培训班出现：如果只是为了写一些应用层程序，确实不需要太多的理论知识，重要的反而是熟练—–只要你能花时间去熟练各种API，就可以写出各种看似炫酷的程序。这一点在我学习Python时可以说体现的更全面，各种眼花缭乱的库，只要能找到合适的库，短短几十行代码就能实现很强大的功能。</p>
-<h2 id="第三阶段："><a href="#第三阶段：" class="headerlink" title="第三阶段："></a>第三阶段：</h2><p>在很长一段时间里，不断熟练各种API并没有让我感觉到有任何实质的成长，我始终觉得只要花时间，这谁都能学会，不断地熟悉各种接口究竟有什么意义呢？也就在这个时候，有朋友向我推荐了一本算法入门书籍，我也是从这本书里重新审视了《数据结构》这一门课程。这本书详略得当地介绍了贪心、分治、动态规划等基本算法，使用的实例基本就在《数据结构》一书中。</p>
-<p>我仍然记得某个下午自己花了2个小时左右实现了快速排序后（以前都是直接使用STL中的算法库），内心获得了长久的满足感与成就感。此后就一发不可收拾，认认真真的开始实现《数据结构》一书里的各种结构与算法。开始时可以说有些困难，稍有些复杂的算法理解起来就比较困难，就算理解了其思路，真正动手写时也会遗漏很多点，往后才逐渐顺手起来。</p>
-<p>往后我在学习了一些《计算机网络》的知识后，通过对各种协议算法的了解，对数据结构的理解更深了一些。</p>
-<p>此刻如果要对数据结构做一个通俗解释的话，我更愿意用一个简单的例子来类比。</p>
-<p>Niklaus Wirth 曾提出：</p>
-<p><b>算法+数据结构=程序</b></p>
-<p>如果将“程序“”比作是“要完成一件事”的话，算法就是“如何完成这件事”，数据结构是“完成这件事所使用的工具”。</p>
-<p>如我想将牙齿刷干净（完成一件事—-程序），首先我要想出一个方案来达到这个目的（如何完成这件事—-算法），然后找到一个合适牙刷（工具—–数据结构）。在最初的几个刷牙的人中，有人造出了“牙刷”这个工具。从此他将牙刷的制造过程隐藏了起来，只将批量造好的牙刷提供给后面的人使用（数据结构的封装）。有人用他人造好的牙刷也能将牙齿洗刷干净，而有些异类发明了一些新的刷牙方法（新的算法），觉得这些牙刷不够好用，他或是重新制造了牙刷，或是在他人基础上改造了牙刷以便更好适应自己的清洁过程（产生新的数据结构）。如果改造的牙刷足够好用，用的人越来越多，此牙刷也会被封装起来。</p>
-<p><b>我觉得数据结构真正作用并不在于实现那些已有的结构与算法，而是训练一个人的抽象化能力，即从事件里抓住主体的本质，概括其主要特性，将其泛化为一般工具的能力。</b></p>
+        <h1 id="算法理解"><a href="#算法理解" class="headerlink" title="算法理解"></a>算法理解</h1><p>Floyd算法用于求图中任意两点的最短距离。</p>
+<h1 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h1><p>Floyd算法的内涵是遍历N个结点，对于第k个结点，将k结点作为中间结点，更新其余结点的信息：即其余结点（i）能否通过结点k来缩短与其他结点(j)的距离</p>
+<p>Floyd的代码写起来非常简洁，但一直有一个小问题会困惑，假设i-j的最短距离中，以k结点更新最短距离时，如果此时i-k和k-j不是最短距离，如何保证i-j是最短距离呢？</p>
+<p>假设i-j最短距离中，编号最大的中间结点是k,i-k中编号最大的结点是k1，k-j中是k2，那么k1，k2都小于k，可知在循环至结点k时，k1，k2都已经循环过了，那么i-k,k-j必定是最短距离。</p>
+<h1 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h1><p>三个嵌套循环,时间复杂度为O(N^3)</p>
+<h1 id="代码实现-C"><a href="#代码实现-C" class="headerlink" title="代码实现(C++)"></a>代码实现(C++)</h1><p>ps: 分享一个小梗</p>
+<p>为什么Dijkstra没有发明Floyd算法？</p>
+<p>因为Dijkstra里 “ijk” k在最里层，而Floyd算法的 “kij” k在最外层 </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX  999999</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> graph[n+<span class="number">1</span>][n+<span class="number">1</span>]=&#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">0</span>  , <span class="number">0</span>  , <span class="number">0</span>  , <span class="number">0</span>  , <span class="number">0</span>   &#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">0</span>  , <span class="number">3</span>  , <span class="number">5</span>  , MAX, MAX &#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">3</span>  , <span class="number">0</span>  , <span class="number">10</span> , <span class="number">4</span>  , <span class="number">1</span>   &#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">5</span>  , <span class="number">10</span> , <span class="number">0</span>  , <span class="number">5</span>  , MAX &#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, MAX, <span class="number">4</span>  , <span class="number">5</span>  , <span class="number">0</span>  , <span class="number">1</span>   &#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, MAX, <span class="number">1</span>  , MAX, <span class="number">1</span>  , <span class="number">0</span>   &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> dis[n+<span class="number">1</span>][n+<span class="number">1</span>];      <span class="comment">//结点 i到j的最短距离</span></span><br><span class="line">    <span class="keyword">int</span> pre[n+<span class="number">1</span>][n+<span class="number">1</span>];      <span class="comment">//结点 i到j的最短距离中 i的下一个结点</span></span><br><span class="line">    <span class="keyword">int</span> i,j,k;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            dis[i][j] = graph[i][j];</span><br><span class="line">            pre[i][j] = j;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">1</span>;k&lt;=n;k++)</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(dis[k][j] != MAX &amp;&amp; dis[i][j] &gt; dis[i][k] + dis[k][j])</span><br><span class="line">                &#123;</span><br><span class="line">                    dis[i][j] = dis[i][k] + dis[k][j];</span><br><span class="line">                    pre[i][j] = pre[i][k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"最短距离"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;dis[i][j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"路径"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">     <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;pre[i][j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"输入结点i,j"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;i&gt;&gt;j;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">    <span class="keyword">while</span>(pre[i][j] != j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"-"</span>&lt;&lt;pre[i][j];</span><br><span class="line">        i = pre[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"-"</span>&lt;&lt;j;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里解释一下pre数组，pre[i][j]表示i-j结点中i的下一结点.</p>
+<p>初始化时，pre[i][j] = j 即默认i-j都有通路，所以下一结点就是j</p>
+<p>循环至结点k时，若通过了结点k来更新时，则pre[i][j] = pre[i][k]，即i到j的中，i与k中，使i的下一结点相同。</p>
+<p>i到j的最短距离中包含了i到k这么一段。</p>
 
       
     </div>
@@ -457,7 +455,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/tags/最短路径/" rel="tag"># 最短路径</a>
+          
+            <a href="/tags/Floyd/" rel="tag"># Floyd</a>
           
         </div>
       
@@ -470,14 +470,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/22/二叉树遍历/" rel="next" title="二叉树遍历">
+                <i class="fa fa-chevron-left"></i> 二叉树遍历
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/21/贪心策略之Dijkstra算法/" rel="prev" title="贪心策略之Dijkstra算法">
-                贪心策略之Dijkstra算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/22/bellman-ford算法/" rel="prev" title="bellman-ford算法">
+                bellman-ford算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -658,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一阶段："><span class="nav-number">1.</span> <span class="nav-text">第一阶段：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶段："><span class="nav-number">2.</span> <span class="nav-text">第二阶段：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三阶段："><span class="nav-number">3.</span> <span class="nav-text">第三阶段：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法理解"><span class="nav-number">1.</span> <span class="nav-text">算法理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法步骤"><span class="nav-number">2.</span> <span class="nav-text">算法步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间复杂度分析"><span class="nav-number">3.</span> <span class="nav-text">时间复杂度分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现-C"><span class="nav-number">4.</span> <span class="nav-text">代码实现(C++)</span></a></li></ol></div>
             
 
           </div>
